@@ -5,13 +5,17 @@
 }
 .navbar-light .navbar-nav .nav-link {
     color: white;
-    padding-right: 50px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: Architects Daughter;
+
+}
+.logo{
+    left:0;
 
 }
 .navbar-nav{
     margin-bottom: revert;
+
 }
 
 .containernav{
@@ -21,7 +25,9 @@
     margin-right: auto;
     margin-left: auto;
 }
-
+#navbarSupportedContent{
+    float: right;
+}
 
 
 .navbar {
@@ -41,7 +47,7 @@
 
 }
 .nav-item{
-    width: 100%;
+    width: fit-content;
 }
 
 navbar-nav ml-auto{
