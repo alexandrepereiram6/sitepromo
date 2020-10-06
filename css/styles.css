@@ -1,42 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 .navbar-light .navbar-nav .nav-link {
     color: white;
     padding-right: 50px;
     font-size: 20px;
-    font-family: Architects Daughter
-;
+    font-family: Architects Daughter;
 
 }
-
-.navbar-brand {
-    position: relative;
-    right: 200px;
+.navbar-nav{
+    margin-bottom: revert;
 }
+
+.containernav{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 
 .navbar {
+    width: 100%;
     position: fixed;
-    margin-left: 250px;
+    right: 0;
     z-index: 3;
-    
+    background-image: url(../asset/fondnav.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .navbar navbar-expand-lg navbar-light {
-    background-image: url(../img/nav.png);
-    background-repeat: no-repeat;
+    padding: 0;
+    z-index: 5;
+
+}
+.nav-item{
+    width: 100%;
 }
 
+navbar-nav ml-auto{
+
+}
 .main-picture {
     position: relative;
-    left: 120px;
+    left: 50px;
     margin-top: 200px;
 }
 
-#header {
-    background: url(../img/fonddiv1.png);
-    background-size:;
+header {
+    background: url(../asset/fonddiv1.png);
+    height: 100vh;
+    background-size: cover;
+    margin-left: -2vh;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+
 }
 
 .h1header {
@@ -45,13 +70,13 @@
     margin-top: 50px;
     margin-bottom: 150px;
     color: grey;
+    z-index: 6;
 }
 
-.h1header #insta a{
-    width: 10%;
+.h1header a{
+
     margin-right: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+
     transition: transform .2s;
 }
 
@@ -82,18 +107,19 @@
     background-color: #bcad90;
     font-size: 28px;
     text-align: left;
-    color: white
+    color: white;
+    height: 100vh;
 }
 
 .textzone1 {
     margin-top: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 220px;
     font-family: Architects Daughter;
 }
 
 .h1zone2 {
     position: relative;
-    margin-top: 320px;
+    margin-top: 400px;
     margin-bottom: 320px;
     color: white;
     font-family: Architects Daughter;
@@ -102,6 +128,7 @@
 #zone2 {
     background-color: #bbb4a4;
     text-shadow: 1px 1px 2px black;
+    height: 100vh;
 }
 
 .z2video {
@@ -138,6 +165,7 @@
 #zone3 {
     text-align: center;
     background: linear-gradient(180deg, #6d6359, #bbb4a4);
+    height: 100vh;
 }
 
 
@@ -166,6 +194,9 @@
 #zone4 {
     text-align: center;
     background-color: #6d6359;
+    height: 130vh;
+
+    
 }
 
 #zone4 p {
@@ -185,7 +216,8 @@
 
 .textzone4 {
     font-size: 40px;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
+    padding-top: 10vh;
     color: white;
     text-align: left;
     font-family: Architects Daughter;
@@ -207,6 +239,7 @@
     text-align: center;
     background: linear-gradient(180deg, #dcd3b4, #656052);
     color: grey;
+    height: 100vh;
 }
 
 .h1zone5 {
@@ -215,6 +248,7 @@
     color: white;
     font-family: Architects Daughter;
 
+
 }
 
 .textzone5 {
@@ -222,3 +256,56 @@
     font-weight: 500;
     margin-bottom: 150px;
 }
+.transition1{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    bottom: -100px;
+
+}
+.transition1 img{
+    transform: translate(0px,-65%) scaleY(0.9) ;
+    width: 100%;
+
+
+}
+.transition2{
+    position: relative;
+    bottom: 100px;
+    height: 100px;
+    width: 100%;
+}
+.transition2 img{
+    transform: translate(0px,-45%) scaleY(0.9) ;
+    width: 100%;
+}
+.transition3{
+    height: 200px;
+    width: 100%;
+
+}
+.transition3 img{
+    transform: translate(0px,-65%) scaleY(0.9) ;
+    width: 100%;
+
+
+}
+
+.transition4{
+    position: relative;
+    bottom: 0px;
+    height: 200px;
+    width: 100%;
+
+}
+.transition4 img{
+    transform: translate(0px,-15%) scaleY(0.9) ;
+    width: 100%;
+
+
+}
+.langues {
+    width:40%;
+    height:40%;
+}
+

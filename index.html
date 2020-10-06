@@ -11,41 +11,47 @@
     <link rel="stylesheet" href="css/animate.css">
     <title>Site promotionnel - Toumaï</title>
   </head>
-  <body>
+  <body >
+      <div id="app">
           
           <!-- Barre de navigation -->
-          
-           <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                    <img src="img/logogrand.png" width="240px" height="75px" alt="logo" >
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+          <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="containernav">
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a  class="nav-link js-scrollTo" href="#header">
+                            <img src="asset/toumai_brun.png" width="240px" height="75px" alt="logo" >
+                        </a>
+                    </li>
                   <li class="nav-item">
-                        <a class="nav-link js-scrollTo" href="#header">Accueil </a>
+                        <a class="nav-link js-scrollTo" href="#header">{{ arrayLangue[langue].navAccueil }}</a>
                   </li>
                   <li class="nav-item">
-                        <a class="nav-link js-scrollTo" href="#zone1">Le jeu</a>
+                        <a class="nav-link js-scrollTo" href="#zone1">{{ arrayLangue[langue].navJeu }}</a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link js-scrollTo" href="#regles">Les règles</a>
+                  <a class="nav-link js-scrollTo" href="#regles">{{ arrayLangue[langue].navRegles }}</a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link js-scrollTo" href="#zone3">Jouez en ligne</a>
+                  <a class="nav-link js-scrollTo" href="#zone3">{{ arrayLangue[langue].navJeuxOnline }}</a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link js-scrollTo" href="#zone4">Achetez le jeu</a>
+                    <a class="nav-link js-scrollTo" href="#zone4">{{ arrayLangue[langue].navAcheter }}</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scrollTo" href="#zone5">{{ arrayLangue[langue].navVideo }}</a>
+                    </li>
+                  <li class="nav-item">
+                      <img class="langues" @click="langueAnglais" src="img/englai.svg">
+                      <img class="langues" @click="langueFrancais" src="img/france.png">
                   </li>
                 </ul>
               </div>
           </div>
         </nav>
-        
+
         <!-- Logo toumaï avec animation/gif en header -->
         <header id="header">
             <div class="container">
@@ -53,43 +59,54 @@
                     <div class="col-xl-12">
                         <div class="contenu">
                             <p class="main-picture">
-                            <img class="wow pulse animated" style="visibility: visible; animation-duration: 1500ms; animation-iteration-count: infinite; animation-name: pulse;" data-wow-iteration="infinite" data-wow-duration="1500ms" src="img/logogrand.png" width="80%" alt="logo toumai"></p>
+                            <img class="wow pulse animated" style="visibility: visible; animation-duration: 1500ms; animation-iteration-count: infinite; animation-name: pulse;" data-wow-iteration="infinite" data-wow-duration="1500ms" src="asset/toumai_brun.png" width="80%" alt="logo toumai">
+                            </p>
                             <div class="h1header">
-                            <a href="#"><img id="insta" src="img/insta.png" alt="insta"></a>
-                            <a href="#"><img id="fb" src="img/fb.png" alt="fb"></a>
-                            <a href="#"><img id="twitter" src="img/twitter.png" alt="twitter"></a>
+                            <a href="#"><img id="insta" src="asset/logoreseaux/insta.png" alt="insta"></a>
+                            <a href="#"><img id="fb" src="asset/logoreseaux/facebook.png" alt="fb"></a>
+                            <a href="#"><img id="twitter" src="asset/logoreseaux/twitter.png" alt="twitter"></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        
+          <!-- div de Transition Branchages -->
+
         <!-- Premier paragraphe ( rejoignez la tribu ) -->
         
         <div id="zone1">
+            <div class="transition1">
+                <img src="asset/transition1.png">
+
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="contenu">
-                            <h1 class="h1zone1">Rejoignez la tribu !</h1>
-                            <p class="textzone1">La nuit tombe, un froid glacial se fait ressentir et des bêtes sauvages menacent votre tribu. Il n’existe qu’un seul moyen pour survivre : le feu. Néanmoins, une seule tribu le possède. Pour l’obtenir à votre tour, il va vous falloir échanger diverses ressources. Entre fourrure, viande et outils, vous allez devoir faire preuve de stratégie pour en acquérir le plus possible afin de les échanger contre le feu. Par ailleurs, n’oubliez pas que les mammouths ont une grande valeur pour cette tribu.
-                            </p>
+
+                            <h1 class="h1zone1">{{ arrayLangue[langue].titre1 }}</h1>
+                            <p class="textzone1">{{ arrayLangue[langue].texte1 }}</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="transition2">
+                <img src="asset/transition2.png">
+
             </div>
         </div>
         
         
     <!-- Animation -->
-       
+
        <div id="zone2">
+
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="contenu">
-                            <h1 class="h1zone2">Décourvrez TOUMAÏ en vidéo</h1>
+                            <h1 class="h1zone2">{{ arrayLangue[langue].titreVideo }}</h1>
                         </div>
                     </div>
                 </div>
@@ -103,11 +120,11 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="contenu">
-                            <h1 class="h1regles">LES REGLES DU JEU !</h1>
+                            <h1 class="h1regles">{{ arrayLangue[langue].titreRegles }}</h1>
                             
-                            <p>Lien vers les règles</p>
+                            <p>{{ arrayLangue[langue].lienRegle }}</p>
                             
-                            <h1 class="h1packaging">Si vous voulez en savoir plus c'est par ici: <a id="aregles" href="#">règles</a></h1>
+                            <h1 class="h1packaging">{{ arrayLangue[langue].lienRegles2 }} <a id="aregles" href="#">règles</a></h1>
                             
                         </div>
                     </div>
@@ -122,7 +139,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="contenu">
-                            <a class="azone3">JOUEZ ICI</a>
+                            <a class="azone3">{{ arrayLangue[langue].jouer }}</a>
                             <p class="textzone3">IFRAME
                             </p>
                         </div>
@@ -134,20 +151,28 @@
         <!-- Achetez le jeu ( boutique ) -->
         
         <div id="zone4">
+
+            <div class="transition3">
+                <img src="asset/transition3.png">
+
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="contenu">
-                            <h1 class="h1zone4">Vous souhaitez commandez votre jeu en version physique ?<br>
-                            Pas de soucis !</h1>
-                            <p class="textzone4">Il vous suffit de cliquer ici :
-                            <a href="#" class="buyz4">ACHETEZ LE !*</a>
+                            <h1 class="h1zone4">{{ arrayLangue[langue].jeuPhysiqueTexte }}
+                            <p class="textzone4">{{ arrayLangue[langue].montrageLien }}
+                            <a href="#" class="buyz4">{{ arrayLangue[langue].jeuLien }}</a>
                             </p>
-                            <p>*Vous ne serez pas décus
+                            <p>{{ arrayLangue[langue].deçu }}
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="transition4">
+                <img src="asset/transition4.png">
+
             </div>
         </div>
         
@@ -158,7 +183,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="contenu">
-                            <h1 class="h1zone5">Vidéo making of</h1>
+                            <h1 class="h1zone5">{{ arrayLangue[langue].VideoMO }}</h1>
                             <p class="textzone5">
                             </p>
                         </div>
@@ -166,7 +191,7 @@
                 </div>
             </div>
         </div>
-        
+    </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
     <script type="text/javascript">
@@ -185,6 +210,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
         $(document).ready(function() {
             $('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -195,5 +221,65 @@
             });
         });
     </script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                langue : 0,
+                arrayLangue : [
+                    {
+
+                        "navAccueil" :"Accueil",
+                        "navJeu" : "Le jeu",
+                        "navRegles" : "Les règles",
+                        "navJeuxOnline":"Jouez en ligne",
+                        "navAcheter": "Achetez le jeu",
+                        "navVideo":"Vidéo",
+                        "titre1":"Rejoignez la tribu !",
+                        "texte1":"La nuit tombe, un froid glacial se fait ressentir et des bêtes sauvages menacent votre tribu. Il n’existe qu’un seul moyen pour survivre : le feu. Néanmoins, une seule tribu le possède. Pour l’obtenir à votre tour, il va vous falloir échanger diverses ressources. Entre fourrure, viande et outils, vous allez devoir faire preuve de stratégie pour en acquérir le plus possible afin de les échanger contre le feu. Par ailleurs, n’oubliez pas que les mammouths ont une grande valeur pour cette tribu.",
+                        "titreVideo":"Découvrez TOUMAÏ en vidéo",
+                        "titreRegles":"LES REGLES DU JEU !",
+                        "lienRegle":"Lien vers les règles",
+                        "lienRegle2":"Si vous voulez en savoir plus c'est par ici: règles",
+                        "jouer":"JOUEZ ICI",
+                        "jeuPhysiqueTexte":"Vous souhaitez commandez votre jeu en version physique ?\n Pas de soucis !",
+                        "montrageLien":"Il vous suffit de cliquer ici : ",
+                        "jeuLien":"ACHETEZ LE !*",
+                        "deçu":"*Vous ne serez pas décus ",
+                        "VideoMO":"Vidéo Making Of",
+                    },
+                    {
+                        "navAccueil" :"Home",
+                        "navJeu" : "The game",
+                        "navRegles" : "The rules",
+                        "navJeuxOnline":"Play Online",
+                        "navAcheter": "Buy the game",
+                        "navVideo":"Video",
+                        "titre1":"Join the tribe !",
+                        "texte1":"Night falls, freezing cold sets in and wild beasts threaten your tribe. There is only one way to survive: fire. However, only one tribe has it. To obtain it yourself, you will have to exchange various resources. Between fur, meat and tools, you will have to use strategy to acquire as much as possible in order to exchange them for fire. Also, remember that mammoths are of great value to this tribe.",
+                        "titreVideo":"Discover TOUMAÏ in video",
+                        "titreRegles":"THE GAME'S RULES !",
+                        "lienRegle":"Link to the rules RULES OF THE GAME!",
+                        "lienRegle2":"Link to the If you want to know more, it's here: rulesrules RULES OF THE GAME!",
+                        "jouer":"PLAY HERE",
+                        "jeuPhysiqueTexte":"Do you want to order your game in physical version?\n No problem !",
+                        "montrageLien":"Just click here :",
+                        "jeuLien":"BUY IT! *",
+                        "deçu":"*You will not be disappointed",
+                        "VideoMO":"Video Making Of",
+                    }
+                ]
+            },
+            methods : {
+                langueAnglais : function() {
+                    return this.langue =1;
+                },
+                langueFrancais : function() {
+                    return this.langue =0;
+                }
+            }
+        })
+    </script>
+
   </body>
 </html>
